@@ -1,336 +1,248 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: black;
-    font-family: "montserrat";
-    color: blanchedalmond;
-    }
-.container {  display: grid;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #283d3d;
+  font-family: "montserrat";
+  color: #b6c7ce;
+  display: auto; }
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../multimedia/fonts/Montserrat-VariableFont_wght.ttf); }
+
+@font-face {
+  font-family: "sifonn";
+  src: url(../multimedia/fonts/SIFONN_BASIC.otf); }
+
+@font-face {
+  font-family: "bebas";
+  src: url(../multimedia/fonts/BebasNeue-Regular.ttf); }
+
+h1 {
+  text-align: center;
+  font-family: "sifonn";
+  font-size: xx-large; }
+
+h2 {
+  text-align: center;
+  font-size: x-large; }
+
+h2, h3, h4 {
+  font-family: "bebas";
+  font-size: large; }
+
+h5 {
+  font-size: small; }
+
+h6 {
+  font-size: smaller; }
+
+p {
+  font-family: "montserrat";
+  color: #b6c7ce;
+  font-size: medium; }
+
+.header {
+  text-align: center;
+  width: auto; }
+  .header .logo {
+    justify-content: center; }
+    .header .logo .logo1 {
+      border-radius: 50%; }
+    .header .logo .titulo {
+      color: #b6c7ce;
+      font-size: larger;
+      font-family: "sifonn"; }
+    .header .logo .subt {
+      color: #b6c7ce;
+      font-size: large;
+      font-family: "bebas"; }
+  .header .nav {
+    width: auto; }
+    .header .nav .menu {
+      background-color: #b6c7ce;
+      list-style-type: none;
+      padding: 0;
+      width: 90%;
+      margin: 20px auto;
+      text-align: center; }
+      .header .nav .menu .li a {
+        padding: 20px;
+        margin: 10px;
+        background-color: antiquewhite;
+        color: black;
+        display: inline-block;
+        font-size: medium; }
+      .header .nav .menu .item {
+        display: inline-block;
+        position: relative;
+        font-size: medium;
+        text-align: center;
+        background-color: #b6c7ce;
+        color: #283d3d; }
+        .header .nav .menu .item:hover a {
+          background-color: #b6c7ce;
+          color: #283d3d; }
+        .header .nav .menu .item a {
+          color: black;
+          text-decoration: none;
+          display: inline-block;
+          padding: auto; }
+          .header .nav .menu .item a .hover {
+            font-size: large; }
+
+body {
+  font-family: "montserrat";
+  overflow-x: hidden; }
+  body .div {
+    margin: 10px; }
+  body .container {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr [space] auto[space] 0.4fr;
+    grid-template-rows: 0.8fr [space] auto [space] 0.4fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 20px 2px;
     grid-auto-flow: row;
-    grid-template-areas:
-          "header"
-          "body"
-          "footer";
-    }
-    .containertour {
-        display: grid; 
-        grid-auto-flow: column dense; 
-        grid-auto-columns: 1fr; 
-        grid-auto-rows: 1fr; 
-        grid-template-columns: 1fr; 
-        grid-template-rows: 1.6fr; 
-        gap: 20px 2px; 
-        grid-template-areas: 
-          "bodytour"; 
-      }
-      .bodytour {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 0.6fr 1.4fr; 
-        gap: 8px 8px; 
-        grid-template-areas: 
-          "hist hist burg burg"
-          "hist hist burg burg"
-          "evit evit evit evit"; 
-        grid-area: bodytour; 
-      }
-      .hist { grid-area: hist; }
-      .burg { grid-area: burg; }
-      .evit { grid-area: evit; }
-
-.bodypage {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr auto auto 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "hist hist burg burg"
-          "hist hist burg burg"
-          "evit evit evit evit";
-        grid-area: body;
-      }
-      
-      .hist { grid-area: hist; }
-      
-      .burg { grid-area: burg; }
-      
-      .evit { grid-area: evit; }
-      
-      .header { grid-area: header; }
-      
-.header { grid-area: header; }
-      
-.body { grid-area: body; 
-    size-adjust: auto
-;
-
-}
-      
-.footer { grid-area: footer; }
-      
-
-.titulo {
-    color: whitesmoke;
-    font-size: larger;
-    font-family: "sifonn";
-}
-.subt{
-    color: whitesmoke;
-    font-size: large;
-    font-family: "bebas";
-}
-.body {
-    font-family: "montserrat"; 
-    overflow-x: hidden;   
-    
-}
-@font-face {
-    font-family: "montserrat";
-    src: url(../multimedia/fonts/Montserrat-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: "sifonn";
-    src: url(../multimedia/fonts/SIFONN_BASIC.otf);
-}
-
-@font-face {
-    font-family: "bebas";
-    src: url(../multimedia/fonts/BebasNeue-Regular.ttf);
-}
-
-h2, h3, h4 {
-    font-family: "bebas";
-    font-size: large;
-}
-
-h1{
-    text-align: center;
-    font-family: "sifonn";
-    font-size: xx-large;
-}
-
-h2{
-    text-align: center;
-    font-size: x-large;
-}
-
-p {
-    font-family: "montserrat";
-    color: blanchedalmond;
-    font-size: medium;
-    
-}
-.logo {
-    text-align: center;
-}
-.logo1 {
-    text-align: center;
-}
-
-.nav {
-    text-align: center;
-}
-
-.menu {
-    background-color: antiquewhite;
-    list-style-type: none;
-    padding: 0;
-    width: 90%;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.menu .item{
-    display: inline-block;
-    position: relative;
-    font-size: medium;
-    text-align: center;
-    background-color: antiquewhite;
-    color: black;
-
-}
-
-.menu .submenu{
-    position: absolute;
-    display: none;
-    
-}
-
-.menu .submenu .subitem{
-    display: block;
-    font-size: medium;
-    padding: auto;
-}
-
-.menu .submenu .subitem{
-    display: block;
-    font-size: medium;
-    padding: auto;
-}
-
-.menu .item a{
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    padding: auto;
-}
-
-.menu li a{
-    padding: 20px;
-    margin: 10px;
-    background-color: antiquewhite;
-    color: black;
-    display: inline-block;
-    font-size: medium;
-}
-
-.menu .item a:hover{
-    font-size: large;
-}
-
-
-.menu .item:hover a{
-    background-color: antiquewhite;
-    color: black;
-}
-
-.con{
-    font-size: small;
-}
-.guias{
+    grid-template-areas: "header" "body" "footer"; }
+  body .con {
+    font-size: small; }
+  body .guias {
     display: flex;
-    margin:20px;
+    margin: 20px;
     flex-wrap: wrap;
     text-align: center;
     flex-direction: row;
-    align-items: stretch;
-}
+    align-items: stretch; }
+    body .guias .guiadiv {
+      justify-content: center; }
+      body .guias .guiadiv .guiap {
+        background-color: #b6c7ce;
+        color: #283d3d;
+        font-size: x-small; }
+      body .guias .guiadiv .guiafoto {
+        border-radius: 50%; }
 
+.containertour {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.6fr;
+  gap: 20px 2px;
+  grid-template-areas: "bodytour"; }
 
+.bodytour {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.6fr 1.4fr;
+  gap: 8px 8px;
+  grid-template-areas: "hist hist burg burg" "hist hist burg burg" "evit evit evit evit";
+  grid-area: bodytour; }
 
-.guiap{
-    font-size: smaller;
-}
-.guiadiv{
-    width: 175px;
-    height: 150px;
-    margin: 1rem;
-}
+.hist {
+  grid-area: hist; }
 
+.burg {
+  grid-area: burg; }
 
-.guiafoto{
-    border-radius: 50%;
-}
+.evit {
+  grid-area: evit; }
 
-.guiap{
-    background-color: antiquewhite;
-    color: black;
-    font-size: x-small;
-}
-h5{
-    font-size: small;
-}
-h6{
-    font-size: smaller;
-}
+.bodypage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto auto 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "hist hist burg burg" "hist hist burg burg" "evit evit evit evit";
+  grid-area: body; }
 
-.div{
-    margin: 10px;
-}
+.hist {
+  grid-area: hist; }
 
-@media only screen and (max-width:576px){
+.burg {
+  grid-area: burg; }
 
-    .logo1{
-        width: 500px;
-    }
-    
-    .container {  
-        display: grid;
-        grid-template-columns: 100% 1fr;
-        grid-template-rows: 0.8fr [space] auto[space] 0.4fr;
-        grid-auto-columns: 1fr;
-        grid-auto-rows: 1fr;
-        gap: 20px 2px;
-        grid-auto-flow: row;
-        grid-template-areas:
-              "header"
-              "body"
-              "footer";
-        }
-        .containertour {
-            display: grid; 
-            grid-auto-flow: column dense; 
-            grid-auto-columns: 1fr; 
-            grid-auto-rows: 1fr; 
-            grid-template-columns: 1fr; 
-            grid-template-rows: 1.6fr; 
-            gap: 20px 2px; 
-            grid-template-areas: 
-              "bodytour"; 
-          }
-          .bodytour {
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr 1fr; 
-            grid-template-rows: 1fr 0.6fr 1.4fr; 
-            gap: 8px 8px; 
-            grid-template-areas: 
-              "hist hist hist hist"
-              "burg burg burg burg"
-              "evit evit evit evit"; 
-            grid-area: bodytour; 
-          }
-          .hist { grid-area: hist; }
-          .burg { grid-area: burg; }
-          .evit { grid-area: evit; }
-    
-    .bodypage {  display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr auto auto 1fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
-            grid-template-areas:
-              "hist hist hist hist"
-              "burg burg burg burg"
-              "evit evit evit evit";
-            grid-area: body;
-          }
-          
-          .hist { grid-area: hist; }
-          
-          .burg { grid-area: burg; }
-          
-          .evit { grid-area: evit; }
-          
-          .header { grid-area: header; }
-          
-    .header { grid-area: header; }
-          
-    .body { grid-area: body; 
-        size-adjust: auto;
-    
-    }
+.evit {
+  grid-area: evit; }
 
-    .guias{
-        display: flex;
-        margin:20px;
-        flex-direction: column;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        text-align: center;
-        align-items: center
-        }
-    
-    .guiadiv{
-        width: 500px;
-        height: 200px;
-        margin: 1rem;
-        }
+.header {
+  grid-area: header; }
 
-    }
+.header {
+  grid-area: header; }
 
+.body {
+  grid-area: body;
+  size-adjust: auto; }
+
+.fot {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: row;
+  align-items: stretch; }
+
+.footer {
+  grid-area: footer; }
+
+@media only screen and (max-width: 576px) {
+  .logo1 {
+    width: 500px; }
+  .container {
+    display: grid;
+    grid-template-columns: 100% 1fr;
+    grid-template-rows: 0.8fr [space] auto [space] 0.4fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px 2px;
+    grid-auto-flow: row;
+    grid-template-areas: "header" "body" "footer"; }
+    .container .bodytour {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.6fr 1.4fr;
+      gap: 8px 8px;
+      grid-template-areas: "hist hist hist hist" "burg burg burg burg" "evit evit evit evit";
+      grid-area: bodytour; }
+    .container .hist {
+      grid-area: hist; }
+    .container .burg {
+      grid-area: burg; }
+    .container .evit {
+      grid-area: evit; }
+    .container .bodypage {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr auto auto 1fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "hist hist hist hist" "burg burg burg burg" "evit evit evit evit";
+      grid-area: body; }
+    .container .hist {
+      grid-area: hist; }
+    .container .burg {
+      grid-area: burg; }
+    .container .evit {
+      grid-area: evit; }
+    .container .header {
+      grid-area: header; }
+  .header {
+    grid-area: header; }
+  .body {
+    grid-area: body;
+    size-adjust: auto; }
+    .body .guias {
+      display: flex;
+      margin: 20px;
+      flex-direction: column;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center guiadiv;
+        align-items-width: 500px;
+        align-items-height: 200px;
+        align-items-margin: 1rem; } }
