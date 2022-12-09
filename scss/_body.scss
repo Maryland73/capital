@@ -1,10 +1,12 @@
 body{
     font-family: "montserrat"; 
     overflow-x: hidden; 
+    width: auto;
     .div{
         margin: 10px;
         } 
     .container {  display: grid;
+        width: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 0.8fr [space] auto[space] 0.4fr;
         grid-auto-columns: 1fr;
@@ -26,8 +28,11 @@ body{
             text-align: center;
             flex-direction: row;
             align-items: stretch;
+            gap: 20px 20px;
+            width: auto;
             .guiadiv{
                 justify-content: center;
+                background-color: $fondo;
                 .guiap{
                 background-color: $letra;
                 color: $fondo;
@@ -39,7 +44,9 @@ body{
             
             }
                 
-        }
+        }}
+        
+    /*Por alguna razón el div que contiene los guías me queda encima del footer. Es la unica página que pasa ésto (y solo comenzó al aplicar SASS/
           
          
     
@@ -47,4 +54,3 @@ body{
 
 
  
-}
